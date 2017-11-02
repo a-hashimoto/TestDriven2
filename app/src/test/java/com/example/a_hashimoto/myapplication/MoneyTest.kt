@@ -12,8 +12,10 @@ import org.junit.Assert.*
 class MoneyTest {
     @Test
     fun testMultiplication() {
-        Dollar five = new Dollar(5)
-        five.times(2)
+        var five : Dollar = Dollar(5)
+        var product : Dollar  = five.times(2)
         assertEquals(10, five.amount)
+        product = five.times(3)
+        assertEquals(15, five.amount)
     }
 }
