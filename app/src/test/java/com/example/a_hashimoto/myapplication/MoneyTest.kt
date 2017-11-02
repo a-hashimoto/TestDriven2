@@ -9,10 +9,11 @@ import org.junit.Assert.*
  *
  * See [testing documentation](http://d.android.com/tools/testing).
  */
-class
-ExampleUnitTest {
+class MoneyTest {
     @Test
-    fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
+    fun testMultiplication() {
+        Dollar five = new Dollar(5)
+        five.times(2)
+        assertEquals(10, five.amount)
     }
 }
