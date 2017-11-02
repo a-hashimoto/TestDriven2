@@ -7,7 +7,7 @@ class Dollar(int: Int) {
         amount = int
     }
 
-    fun times(int: Int) : Unit{
-        amount *= int
+    fun times(time: Int) : Dollar{
+        return Dollar(time * amount)
     }
 }

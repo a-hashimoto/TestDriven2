@@ -1,8 +1,7 @@
 package com.example.a_hashimoto.myapplication
 
+import org.junit.Assert.assertEquals
 import org.junit.Test
-
-import org.junit.Assert.*
 
 /**
  * Example local unit test, which will execute on the development machine (host).
@@ -12,10 +11,11 @@ import org.junit.Assert.*
 class MoneyTest {
     @Test
     fun testMultiplication() {
-        var five : Dollar = Dollar(5)
-        var product : Dollar  = five.times(2)
-        assertEquals(10, five.amount)
+        var five: Dollar = Dollar(5)
+        var product: Dollar
+        product = five.times(2)
+        assertEquals(10, product.amount)
         product = five.times(3)
-        assertEquals(15, five.amount)
+        assertEquals(15, product.amount)
     }
 }
