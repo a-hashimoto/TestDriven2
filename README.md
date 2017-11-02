@@ -3,6 +3,8 @@
 testをかく
 ・$5 + 10 CHF = $10（レートが2:1の場合）
 ・hashcode()
+・nullとの等価性比較
+・他のオブジェクトとの等価性比較
 
 complete
 ・equals()
