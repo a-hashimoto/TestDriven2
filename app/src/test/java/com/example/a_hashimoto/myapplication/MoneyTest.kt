@@ -21,4 +21,11 @@ class MoneyTest {
         assertTrue(Dollar(5) == Dollar(5))
         assertFalse(Dollar(5) == Dollar(6))
     }
+
+    @Test
+    fun testFrancMultiplication() {
+        var five: Franc = Franc(5)
+        assertEquals(Franc(10), five.times(2))
+        assertEquals(Franc(15), five.times(3))
+    }
 }
