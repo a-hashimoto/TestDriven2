@@ -1,13 +1,13 @@
 package com.example.a_hashimoto.myapplication
 
-class Dollar(private var amount: Int = 0) : Money(){
+class Dollar(private var dollar: Int) : Money(dollar){
 
     fun times(time: Int): Dollar {
         return Dollar(time * amount)
     }
 
     override fun equals(other: Any?): Boolean {
-        val dollar: Dollar = other as Dollar
+        val dollar: Money = other as Money
         return amount == dollar.amount
     }
 }
