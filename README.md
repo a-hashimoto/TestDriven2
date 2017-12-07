@@ -13,3 +13,4 @@ complete
 ・Dollarクラス作成
 ・timesメソッドを作成
 ・amountフィールドを作成する
+・amountをprivateにする

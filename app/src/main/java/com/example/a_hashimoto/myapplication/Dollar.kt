@@ -1,7 +1,7 @@
 package com.example.a_hashimoto.myapplication
 
 class Dollar(int: Int) {
-    var amount: Int = 0
+    private var amount: Int = 0
 
     init {
         amount = int
