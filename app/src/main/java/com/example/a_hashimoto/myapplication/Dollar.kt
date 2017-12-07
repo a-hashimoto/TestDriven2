@@ -6,8 +6,4 @@ class Dollar(private var dollar: Int) : Money(dollar){
         return Dollar(time * amount)
     }
 
-    override fun equals(other: Any?): Boolean {
-        val dollar: Money = other as Money
-        return amount == dollar.amount
-    }
 }
