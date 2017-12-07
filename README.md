@@ -1,10 +1,13 @@
 # TODOLIST
 
 testをかく
-・$5 + 10 CHF = $10（レートが2:1の場合）本chapter
+・$5 + 10 CHF = $10（レートが2:1の場合）
 ・hashcode()
 ・nullとの等価性比較
 ・他のオブジェクトとの等価性比較
+・DollarとFrancの重複
+・equalsの一般化
+・timesの一般化
 
 complete
 ・equals()
