@@ -1,6 +1,6 @@
 package com.example.a_hashimoto.myapplication
 
-class Dollar(private var amount: Int = 0) {
+class Dollar(private var amount: Int = 0) : Money(){
 
     fun times(time: Int): Dollar {
         return Dollar(time * amount)
