@@ -8,13 +8,13 @@ testをかく
 ・DollarとFrancの重複
 ・equalsの一般化
 ・timesの一般化
-・DollarとFrancの比較
+~~・DollarとFrancの比較~~
 
 complete
-・equals()
-・$5 * 2 = $10”
+・~~equals()~~
+~~・$5 * 2 = $10”
 ・productに代入できるようにするtimesのメソッドを変更する
 ・Dollarクラス作成
 ・timesメソッドを作成
 ・amountフィールドを作成する
-・amountをprivateにする
+・amountをprivateにする~~
