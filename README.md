@@ -9,6 +9,7 @@ testをかく
 ・equalsの一般化
 ・timesの一般化
 ~~・DollarとFrancの比較~~
+・通貨の概念
 
 complete
 ・~~equals()~~
