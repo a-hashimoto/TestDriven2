@@ -11,14 +11,14 @@ import org.junit.Test
 class MoneyTest {
     @Test
     fun testMultiplication() {
-        var five: Dollar = Dollar(5)
+        var five: Money = Money.dollar(5)
         assertEquals(Dollar(10), five.times(2))
         assertEquals(Dollar(15), five.times(3))
     }
 
     @Test
     fun testEquality(){
-        val franc = Franc(5)
+        val franc = Money.dollar(5)
         assertTrue(Dollar(5) == Dollar(5))
         assertFalse(Dollar(5) == Dollar(6))
         assertTrue(Franc(5) == Franc(5))
