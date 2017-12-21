@@ -17,11 +17,11 @@ abstract class Money(val amount: Int, private val currency: String) {
 
     companion object {
         fun dollar(amount: Int): Dollar {
-            return Dollar(amount)
+            return Dollar(amount, "USD")
         }
 
         fun franc(amount: Int): Franc {
-            return Franc(amount)
+            return Franc(amount, "CHF")
         }
     }
 }
