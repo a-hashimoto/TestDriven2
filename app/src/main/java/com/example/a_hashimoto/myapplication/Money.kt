@@ -4,6 +4,8 @@ abstract class Money(var amount: Int) {
 
     abstract fun times(time: Int) :Money
 
+    abstract fun currency() : String
+
     override fun equals(other: Any?): Boolean {
         val money: Money? = other as? Money
         return amount == money?.amount
