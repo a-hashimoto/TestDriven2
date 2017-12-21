@@ -1,13 +1,9 @@
 package com.example.a_hashimoto.myapplication
 
-class Dollar(dollar: Int) : Money(dollar){
-    val currency = "USD"
-    override fun currency(): String {
-        return currency
-    }
+class Dollar(dollar: Int, currency: String) : Money(dollar, "USD"){
 
     override fun times(time: Int): Money {
-        return Dollar(time * amount)
+        return Dollar(time * amount, null)
     }
 
 }

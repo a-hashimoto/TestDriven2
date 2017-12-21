@@ -1,10 +1,8 @@
 package com.example.a_hashimoto.myapplication
 
-abstract class Money(var amount: Int) {
+abstract class Money(var amount: Int, var currency: String) {
 
     abstract fun times(time: Int) :Money
-
-    abstract fun currency() : String
 
     override fun equals(other: Any?): Boolean {
         val money: Money? = other as? Money
@@ -14,12 +12,12 @@ abstract class Money(var amount: Int) {
 
 
     companion object {
-        fun dollar(amount: Int) : Dollar{
-            return Dollar(amount)
+        fun dollar(amount: Int, currency: String) : Dollar{
+            return Dollar(amount, null)
         }
 
-        fun franc(amount: Int) : Franc{
-            return Franc(amount)
+        fun franc(amount: Int, currency: String) : Franc{
+            return Franc(amount, null)
         }
     }
 }
