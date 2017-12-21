@@ -11,7 +11,7 @@ import org.junit.Test
 class MoneyTest {
     @Test
     fun testMultiplication() {
-        var five: Money = Money.dollar(5, null)
+        var five: Money = Money.dollar(5)
         assertEquals(Money.dollar(10), five.times(2))
         assertEquals(Money.dollar(15), five.times(3))
     }
