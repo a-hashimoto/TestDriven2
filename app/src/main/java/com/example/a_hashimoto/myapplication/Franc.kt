@@ -1,8 +1,8 @@
 package com.example.a_hashimoto.myapplication
 
-class Franc(franc: Int, currency: String) : Money(franc, "CHF"){
+class Franc(fran: Int, currency: String) : Money(fran){
 
     override fun times(time: Int): Money {
-        return Franc(time * amount, null)
+        return franc(time * amount, null)
     }
 }

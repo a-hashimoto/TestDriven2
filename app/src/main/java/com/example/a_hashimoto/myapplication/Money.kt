@@ -1,6 +1,6 @@
 package com.example.a_hashimoto.myapplication
 
-abstract class Money(var amount: Int, var currency: String) {
+abstract class Money(var amount: Int) {
 
     abstract fun times(time: Int) :Money
 
