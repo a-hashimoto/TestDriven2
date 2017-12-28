@@ -1,8 +1,8 @@
 package com.example.a_hashimoto.myapplication
 
-open class Money(val amount: Int, private val currency: String) {
+class Money(private val amount: Int, private val currency: String) {
 
-    open fun times(multiplier: Int): Money? {
+    fun times(multiplier: Int): Money {
         return Money(amount * multiplier, currency)
     }
 
