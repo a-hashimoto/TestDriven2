@@ -1,6 +1,6 @@
 package com.example.a_hashimoto.myapplication
 
-class Money(private val amount: Int, private val currency: String) : Expression{
+class Money(val amount: Int, private val currency: String) : Expression{
 
     override fun equals(other: Any?): Boolean {
         val money: Money? = other as? Money
