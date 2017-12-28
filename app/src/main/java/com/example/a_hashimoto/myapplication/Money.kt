@@ -1,19 +1,20 @@
 package com.example.a_hashimoto.myapplication
 
-abstract class Money(val amount: Int, private val currency: String) {
+open class Money(val amount: Int, private val currency: String) {
 
-    abstract fun times(time: Int): Money
+    open fun times(multiplier: Int): Money? {
+        return Money(amount * multiplier, currency)
+    }
 
     override fun equals(other: Any?): Boolean {
         val money: Money? = other as? Money
         return amount == money?.amount
-                && this::class == money::class
+                && currency() == money.currency()
     }
 
     fun currency(): String {
         return currency
     }
-
 
     companion object {
         fun dollar(amount: Int): Dollar {
