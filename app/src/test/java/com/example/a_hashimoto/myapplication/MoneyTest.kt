@@ -34,7 +34,7 @@ class MoneyTest {
         val five : Money = Money.dollar(5)
         val sum : Expression = five.plus(five)
         val bank = Bank()
-        val reduced : Bank? = bank.reduce(sum, "USD")
+        val reduced : Money = bank.reduce(sum, "USD")
         assertEquals(Money.dollar(10),reduced)
 
     }
