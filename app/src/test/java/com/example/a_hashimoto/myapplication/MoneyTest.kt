@@ -9,6 +9,8 @@ import org.junit.Test
  * See [testing documentation](http://d.android.com/tools/testing).
  */
 class MoneyTest {
+    val usd = "USD"
+    val chf = "CHF"
     @Test
     fun testMultiplication() {
         var five: Money = Money.dollar(5)
@@ -25,8 +27,8 @@ class MoneyTest {
 
     @Test
     fun testCurrency() {
-        assertEquals("USD", Money.dollar(1).currency())
-        assertEquals("CHF", Money.franc(1).currency())
+        assertEquals(usd, Money.dollar(1).currency())
+        assertEquals(chf, Money.franc(1).currency())
     }
 
     @Test
@@ -34,13 +36,13 @@ class MoneyTest {
         val five : Money = Money.dollar(5)
         val sum : Expression = five.plus(five)
         val bank = Bank()
-        val reduced : Money = bank.reduce(sum, "USD")
+        val reduced : Money = bank.reduce(sum, usd)
         assertEquals(Money.dollar(10),reduced)
     }
 
     @Test
     fun testPlusReturnsSum() {
-        val five = Money(5, "USD")
+        val five = Money(5, usd)
         val result : Expression = five + five
         val sum : Sum = result as Sum
         assertEquals(five, sum.augend)
@@ -51,8 +53,15 @@ class MoneyTest {
     fun testReduceSum () {
         var sum : Expression = Sum(Money.dollar(3), Money.dollar(4))
         val bank = Bank()
-        val result = bank.reduce(sum, "USD")
+        val result = bank.reduce(sum, usd)
         assertEquals(Money.dollar(7), result)
+    }
+
+    @Test
+    fun testReduceMoney() {
+        val bank = Bank()
+        val result = bank.reduce(Money.dollar(1), usd)
+        assertEquals(Money.dollar(1), result)
     }
 
 }
