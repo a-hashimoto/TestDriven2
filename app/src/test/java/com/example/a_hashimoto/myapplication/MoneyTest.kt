@@ -49,7 +49,7 @@ class MoneyTest {
 
     @Test
     fun testReduceSum () {
-        var sum : Expression = Sum(Money.dollar(3) + Money.dollar(4))
+        var sum : Expression = Sum(Money.dollar(3), Money.dollar(4))
         val bank = Bank()
         val result = bank.reduce(sum, "USD")
         assertEquals(Money.dollar(7), result)
