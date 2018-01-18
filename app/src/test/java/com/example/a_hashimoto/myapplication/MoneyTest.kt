@@ -77,4 +77,14 @@ class MoneyTest {
         assertEquals(1, Bank().rate(usd, usd))
     }
 
+    @Test
+    fun testMixedAddition() {
+        val fiveBucks = Money.dollar(5)
+        val tenFrancs = Money.franc(10)
+        val bank = Bank()
+        bank.addRate(chf, usd, 2)
+        val result = bank.reduce(fiveBucks.plus(tenFrancs), usd)
+        assertEquals(Money.dollar(10), result)
+    }
+
 }
