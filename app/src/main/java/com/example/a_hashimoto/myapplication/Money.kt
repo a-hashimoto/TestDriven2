@@ -8,7 +8,7 @@ class Money(val amount: Int, private val currency: String) : Expression {
                 && currency() == money.currency()
     }
 
-    operator fun plus(addend: Expression): Expression {
+    override operator fun plus(addend: Expression): Expression {
         return Sum(this, addend)
     }
 
