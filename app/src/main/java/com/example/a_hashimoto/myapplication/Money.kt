@@ -12,8 +12,9 @@ class Money(val amount: Int, private val currency: String) : Expression {
         return Sum(this, addend)
     }
 
-    override fun reduce(to: String): Money {
-        return this
+    override fun reduce(bank: Bank, to: String): Money {
+
+        return Money(amount / bank.rate(currency, to), to)
     }
 
     operator fun times(multiplier: Int): Money {
