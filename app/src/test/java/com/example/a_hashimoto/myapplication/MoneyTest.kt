@@ -72,4 +72,9 @@ class MoneyTest {
         assertEquals(Money.dollar(1), result)
     }
 
+    @Test
+    fun testIdentityRate() {
+        assertEquals(1, Bank().rate(usd, usd))
+    }
+
 }
