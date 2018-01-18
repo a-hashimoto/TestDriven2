@@ -4,7 +4,7 @@ import java.util.HashMap
 
 class Bank {
 
-    internal var rates: HashMap<Pair, Int> = HashMap()
+    internal var rates: HashMap<Pair<String, String>, Int> = HashMap()
 
     fun reduce(source : Expression, to : String) : Money {
         return source.reduce(this, to)

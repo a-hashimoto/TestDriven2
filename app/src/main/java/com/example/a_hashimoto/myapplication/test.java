@@ -1,5 +1,7 @@
 package com.example.a_hashimoto.myapplication;
 
+import android.util.Pair;
+
 import java.util.HashMap;
 import java.util.Map;
 
