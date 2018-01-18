@@ -8,16 +8,15 @@ class Money(val amount: Int, private val currency: String) : Expression {
                 && currency() == money.currency()
     }
 
-    operator fun plus(addend: Money): Expression {
+    operator fun plus(addend: Expression): Expression {
         return Sum(this, addend)
     }
 
     override fun reduce(bank: Bank, to: String): Money {
-
         return Money(amount / bank.rate(currency, to), to)
     }
 
-    operator fun times(multiplier: Int): Money {
+    operator fun times(multiplier: Int): Expression {
         return Money(amount * multiplier, currency)
     }
 

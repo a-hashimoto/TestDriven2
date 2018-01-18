@@ -33,25 +33,25 @@ class MoneyTest {
 
     @Test
     fun testSimpleAddition() {
-        val five : Money = Money.dollar(5)
-        val sum : Expression = five.plus(five)
+        val five: Money = Money.dollar(5)
+        val sum: Expression = five.plus(five)
         val bank = Bank()
-        val reduced : Money = bank.reduce(sum, usd)
-        assertEquals(Money.dollar(10),reduced)
+        val reduced: Money = bank.reduce(sum, usd)
+        assertEquals(Money.dollar(10), reduced)
     }
 
     @Test
     fun testPlusReturnsSum() {
         val five = Money(5, usd)
-        val result : Expression = five + five
-        val sum : Sum = result as Sum
+        val result: Expression = five + five
+        val sum: Sum = result as Sum
         assertEquals(five, sum.augend)
         assertEquals(five, sum.addend)
     }
 
     @Test
-    fun testReduceSum () {
-        var sum : Expression = Sum(Money.dollar(3), Money.dollar(4))
+    fun testReduceSum() {
+        var sum: Expression = Sum(Money.dollar(3), Money.dollar(4))
         val bank = Bank()
         val result = bank.reduce(sum, usd)
         assertEquals(Money.dollar(7), result)
@@ -79,8 +79,8 @@ class MoneyTest {
 
     @Test
     fun testMixedAddition() {
-        val fiveBucks = Money.dollar(5)
-        val tenFrancs = Money.franc(10)
+        val fiveBucks: Expression = Money.dollar(5)
+        val tenFrancs: Expression = Money.franc(10)
         val bank = Bank()
         bank.addRate(chf, usd, 2)
         val result = bank.reduce(fiveBucks.plus(tenFrancs), usd)
