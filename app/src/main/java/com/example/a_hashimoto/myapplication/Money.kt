@@ -16,7 +16,7 @@ class Money(val amount: Int, private val currency: String) : Expression {
         return Money(amount / bank.rate(currency, to), to)
     }
 
-    operator fun times(multiplier: Int): Expression {
+    override operator fun times(multiplier: Int): Expression {
         return Money(amount * multiplier, currency)
     }
 
