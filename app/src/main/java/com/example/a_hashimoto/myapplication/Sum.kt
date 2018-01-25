@@ -2,7 +2,7 @@ package com.example.a_hashimoto.myapplication
 
 class Sum(val augend: Expression, val addend: Expression) : Expression {
     override fun plus(addend: Expression): Expression {
-        return addend
+        return Sum(this, addend)
     }
 
     override fun reduce(bank: Bank, to: String): Money {
