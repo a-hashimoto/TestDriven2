@@ -92,10 +92,21 @@ class MoneyTest {
         val fiveBucks = Money.dollar(5)
         val tenFrancs = Money.franc(10)
         val bank = Bank()
-        bank.addRate(chf,usd,2)
+        bank.addRate(chf, usd, 2)
         val sum = Sum(fiveBucks, tenFrancs).plus(fiveBucks)
         val result = bank.reduce(sum, usd)
         assertEquals(Money.dollar(15), result)
+    }
+
+    @Test
+    fun testSumTimes() {
+        val fiveBucks = Money.dollar(5)
+        val tenFrancs = Money.franc(10)
+        val bank = Bank()
+        bank.addRate(chf, usd, 2)
+        val sum = Sum(fiveBucks, tenFrancs).times(2)
+        val result = bank.reduce(sum, usd)
+        assertEquals(Money.dollar(20), result)
     }
 
 }
